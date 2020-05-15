@@ -1,0 +1,20 @@
+server:
+  port: 8882
+
+spring:
+  application:
+    name: spring-cloud-gateway
+
+zuul :
+  routes :
+    aclient:
+      path: /aclient
+      serviceId: spring-cloud-client
+    bclient:
+      path: /bclient
+      serviceId: spring-cloud-clientb
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8880/eureka/

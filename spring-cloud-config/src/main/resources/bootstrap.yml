@@ -1,0 +1,18 @@
+server:
+  port: 8881
+
+spring:
+  application:
+    name: spring-cloud-config
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/config-repo
+  profiles:
+    active: native
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8880/eureka/
