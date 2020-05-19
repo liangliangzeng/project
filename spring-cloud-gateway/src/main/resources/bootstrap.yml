@@ -8,10 +8,10 @@ spring:
 zuul :
   routes :
     aclient:
-      path: /aclient
+      path: /aclient/**
       serviceId: spring-cloud-client
     bclient:
-      path: /bclient
+      path: /bclient/**
       serviceId: spring-cloud-clientb
 
 eureka:
