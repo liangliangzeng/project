@@ -32,6 +32,9 @@
         <spring-boot-maven-plugin.version>2.2.7.RELEASE</spring-boot-maven-plugin.version>
 
         <lombok.version>1.18.12</lombok.version>
+        <log4j-version>2.13.3</log4j-version>
+        <slf4j-version>2.0.0-alpha1</slf4j-version>
+        <fastjson-version>1.2.68</fastjson-version>
     </properties>
 
     <dependencyManagement>
@@ -63,6 +66,34 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <scope>provided</scope>
+        </dependency>
+        <!-- log4j -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>${log4j-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>${log4j-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j-impl</artifactId>
+            <version>${log4j-version}</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- fastjson -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fastjson-version}</version>
         </dependency>
     </dependencies>
 
